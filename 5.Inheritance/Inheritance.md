@@ -378,32 +378,3 @@ aditya.Employee::getSalary();
   // In derieved class
   Employee::getSalary();
 ```
-## `this` Pointer
-
-- Every Object in C++ has access to its own address through `this` pointer
-
-- `this` pointer is an implicit parameter to all the member functions
-
-- Note : Friend functions don't have a `this` pointer because they are not the member functions of the class
-
-- In Simple terms `this` pointer contains address of the object
-
-- Code
-```
-	class Student {
-	private:
-		string name;
-		string regNo;
-	public:
-		void setName(string name) {
-			this->name = name;
-			// name = name; Will throw a garbage value in name variable
-			}
-		void setReg(string reg_no) {
-			regNo = reg_no;
-			// Here C++ implicitly uses the this pointer to access regNo variable
-			}
-	}
-```
-- We can also call the base class methods using the derieved class.
-> To understand how the actual implementation works , please check the file in Programs directory.

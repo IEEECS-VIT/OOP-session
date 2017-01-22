@@ -34,7 +34,7 @@ Default constructor is added only when we don't define an overloaded constructor
 * Example
 	#### class definition
 	```
-	class student {
+	class Student {
 	string name;
 	string school;
 	public :

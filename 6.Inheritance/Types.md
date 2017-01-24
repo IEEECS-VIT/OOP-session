@@ -1,3 +1,6 @@
+# Inheritence and its types-
+
+
 Inheritance is one of the most important and most exclusive features of OOPS  i.e we can define , derive  &  create a child class 
 In terms of another parent class which allows the Child class to inherit and use all the non-private features  (properties and methods) 
 of the parent class also have some new features of its own. 
@@ -19,7 +22,7 @@ b) Overloaded operators of parent class.
 c) The friend function of the parent class.(A friend function is a function that can access the non-public members of a class, even though the function itself is not a member of the class.) 
 
 
-Types of Inheritance –
+#Types of Inheritance –
 
 a)Single level inheritance- One parent ,  one Child
 

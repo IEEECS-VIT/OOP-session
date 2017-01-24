@@ -12,20 +12,20 @@
 ```
 class <Parent_classname> {
 		public :
-			rt func1();
-			rt func2();
+			return_type function_name();
+			return_type function2_name();
 };
 class <Child_classname> : public/protected <Parent_classname> {
 	public :
-		rt func3();
+		return_type function3_name();
 };
 
 int main()
 {
-	Child_classname object;
-	object.func1();
-	object.func2();
-	object.func3();
+	Child_classname object_name;
+	object.function1_name();
+	object.function2_name();
+	object.function3_name();
 }
 ```
 ### Protected Access Specifier :
@@ -214,7 +214,8 @@ class user : public A_baseClass , B_baseClass {
 }
 
 
-int main() {
+int main()
+{
 	user userObj;
 	userObj.callVNumber();
 	userObj.callJNumber();

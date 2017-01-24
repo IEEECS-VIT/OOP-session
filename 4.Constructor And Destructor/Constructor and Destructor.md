@@ -43,12 +43,13 @@ Default constructor is added only when we don't define an overloaded constructor
 		}
 	}
 	```
-	#### object initialization
+#### object initialization
 	```
 		student aditya ;
 		// Throws an Error as no default constructor defined (without parameters)
 
 	```
+
 ## Destructors
 
 A destructor is a special member function of the class which is executed whenever the object if the class goes out of scope or whenever a delete expression is applied to the pointer that points to the object of that class

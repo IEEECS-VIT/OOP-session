@@ -22,8 +22,8 @@ Three are three types of employees in Indian railways. They are regular, daily w
 	int n1 = 10;
 	int n2 = 30;
 	char ch = ‘*’;
-	Test (n1,n2);
-	Test (ch);
+	test (n1,n2);
+	test (ch);
 	return (0);
 	}
 	void test (int x, int y)
@@ -54,27 +54,39 @@ Three are three types of employees in Indian railways. They are regular, daily w
 - C++ compilers encodes each function identifier with the number and types of its parameters (sometimes referred to as name mangling or name decoration) to enable type-safe linkage.
 
 # Code Example
-- Following code fragment overloads a function name prnsqr( ).
 ```
-void prnsqr (int i); 		//overloaded for integer #1
-void prnsqr (char c); 	//overloaded for character #2
-void prnsqr (float f);	//overloaded for floats #3
-void prnsqr (double d);	//overloaded for double floats #4
-void prnsqr (int i)
-{
-cout<<“Integer”<<i<<“’s square is”<<i*i<<“\n”;
-}
-void prnsqr (char c);
-{
-cout <<“No Square for characters”<<“\n”;
-}
-void prnsqr (float f)
-{
-cout<<“float”<<f <<“’s square is”<<f *f<<“\n”;
-}
-void prnsqr (double d)
-{
-cout <<“Double float”<<d<<“’s square is”<<d*d<<“\n’;
+#include <iostream>
+using namespace std;
+
+class printData {
+   public:
+   	//print() being overloded based on the types of arguments it takes
+      void print(int i) {
+         cout << "Printing int: " << i << endl;
+      }
+
+      void print(double  f) {
+         cout << "Printing float: " << f << endl;
+      }
+
+      void print(string c) {
+         cout << "Printing character: " << c << endl;
+      }
+};
+
+int main(void) {
+   printData pd;
+
+   // Call print to print integer
+   pd.print(5);
+
+   // Call print to print float
+   pd.print(500.263);
+
+   // Call print to print character
+   pd.print("Hello C++");
+
+   return 0;
 }
 ```
 
@@ -151,6 +163,11 @@ Will invoke amount()  with argument values 3000, 4 and 0.08
 Will invoke amount()  with argument values 2500, 5, and 0.12 respectively
 
 # Solution to the "Find Gross Pay" problem
-- Refer to program codes.
+- Make 3 overloaded functions
+```
+void gross_pay(float basic, float hra, float da); //Regular employees
+void gross_pay(float wagesPerHour, float hours); //Daily wages
+void gross_pay(float amount);		//Consolidated
+```
 
 ## THANK YOU
